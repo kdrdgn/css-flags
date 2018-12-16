@@ -1,0 +1,35 @@
+{
+  "name": "css-flags",
+  "version": "1.0.0",
+  "description": "county flags with css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:scss": "node-sass --output-style expanded --source-map true index.scss css/index.css",
+    "css:lint": "stylelint --syntax scss \"**/*.scss\"",
+    "css:lint:fix": "stylelint --syntax scss \"**/*.scss\" --fix",
+    "start": "npm run build:scss -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdrdgn/css-flags.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "flags"
+  ],
+  "author": "kdrdgn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kdrdgn/css-flags/issues"
+  },
+  "homepage": "https://github.com/kdrdgn/css-flags#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0",
+    "stylelint-scss": "^3.3.0"
+  }
+}

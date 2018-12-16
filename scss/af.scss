@@ -1,0 +1,29 @@
+$black: #000;
+$red: #D32011;
+$green: #007A36;
+$white: #FFF;
+
+body.AF {
+    .flag-container {
+        @include aspect-ratio(2,3);
+    }
+    
+    .flag {
+        background-color: $red;
+        &:before , &:after {
+            content: "";
+            display: block;
+            width: calc( 100% / 3 );
+            height: 100%;
+        }
+        &:before {
+            float: left;
+            background: $black;
+        }
+    
+        &:after {
+            float: right;
+            background: $green;
+        }
+    }
+}

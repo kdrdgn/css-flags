@@ -1,0 +1,27 @@
+// austria
+$red: #ED2939;
+
+body.AT {
+    .flag-container {
+        @include aspect-ratio(2,3);
+    }
+    
+    .flag {
+        background-color: $red;
+        &:before , &:after {
+            content: "";
+            display: block;
+            height: calc( 100% / 3 );
+            width: 100%;
+        }
+        &:before {
+            float: left;
+            background: $red;
+        }
+    
+        &:after {
+            float: right;
+            background: $white;
+        }
+    }
+}

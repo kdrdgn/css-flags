@@ -1,0 +1,67 @@
+@mixin aspect-ratio($height, $width) {
+    position: relative;
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > .flag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+ // main flag colors
+ $white: #FFF !default;
+ $black: #000 !default;
+
+body {
+    background-color: #F0F0F0;
+}
+
+.flag-container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 70vw;
+    margin: 60px auto;
+    margin-bottom: 20px;
+    @include aspect-ratio(2,3);
+    overflow: hidden;
+    transition: all;
+}
+
+.flag {
+    // width: 70vw;
+    // height: 35vw;
+    background: blue;
+    outline: 2px solid #DDD;
+    outline-offset: 10px;
+    transition: all;
+    transition-duration: .5s;
+    &:before, &:after {
+        content: "";
+        transition: all;
+        transition-duration: .5s;
+    }
+}
+
+.countries {
+    text-align: center;
+    input {
+        width: 70vw;
+        padding: 14px;
+        border: 1px solid #DDD;
+        font-size: 16px;
+    }
+}
+
+// countries
+@import 'scss/af.scss';
+@import 'scss/am.scss';
+@import 'scss/at.scss';

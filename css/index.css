@@ -1,0 +1,177 @@
+body {
+  background-color: #F0F0F0;
+}
+
+.flag-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: 60px auto;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all;
+}
+
+.flag-container:before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 66.66667%;
+}
+
+.flag-container > .flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.flag {
+  background: blue;
+  outline: 2px solid #DDD;
+  outline-offset: 10px;
+  transition: all;
+  transition-duration: .5s;
+}
+
+.flag:before, .flag:after {
+  content: "";
+  transition: all;
+  transition-duration: .5s;
+}
+
+.countries {
+  text-align: center;
+}
+
+.countries input {
+  width: 70vw;
+  padding: 14px;
+  border: 1px solid #DDD;
+  font-size: 16px;
+}
+
+body.AF .flag-container {
+  position: relative;
+}
+
+body.AF .flag-container:before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 66.66667%;
+}
+
+body.AF .flag-container > .flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body.AF .flag {
+  background-color: #D32011;
+}
+
+body.AF .flag:before, body.AF .flag:after {
+  content: "";
+  display: block;
+  width: calc( 100% / 3);
+  height: 100%;
+}
+
+body.AF .flag:before {
+  float: left;
+  background: #000;
+}
+
+body.AF .flag:after {
+  float: right;
+  background: #007A36;
+}
+
+body.AM .flag-container {
+  position: relative;
+}
+
+body.AM .flag-container:before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 50%;
+}
+
+body.AM .flag-container > .flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body.AM .flag {
+  background-color: #F2A800;
+}
+
+body.AM .flag:before, body.AM .flag:after {
+  content: "";
+  display: block;
+  height: calc( 100% / 3);
+  width: 100%;
+}
+
+body.AM .flag:before {
+  float: left;
+  background: #d90012;
+}
+
+body.AM .flag:after {
+  float: right;
+  background: #0033a0;
+}
+
+body.AT .flag-container {
+  position: relative;
+}
+
+body.AT .flag-container:before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 66.66667%;
+}
+
+body.AT .flag-container > .flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body.AT .flag {
+  background-color: #ED2939;
+}
+
+body.AT .flag:before, body.AT .flag:after {
+  content: "";
+  display: block;
+  height: calc( 100% / 3);
+  width: 100%;
+}
+
+body.AT .flag:before {
+  float: left;
+  background: #ED2939;
+}
+
+body.AT .flag:after {
+  float: right;
+  background: #FFF;
+}
+
+/*# sourceMappingURL=index.css.map */

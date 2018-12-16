@@ -1,0 +1,29 @@
+// armenia
+$red: #d90012;
+$blue: #0033a0;
+$yellow: #F2A800;
+
+body.AM {
+    .flag-container {
+        @include aspect-ratio(1,2);
+    }
+    
+    .flag {
+        background-color: $yellow;
+        &:before , &:after {
+            content: "";
+            display: block;
+            height: calc( 100% / 3 );
+            width: 100%;
+        }
+        &:before {
+            float: left;
+            background: $red;
+        }
+    
+        &:after {
+            float: right;
+            background: $blue;
+        }
+    }
+}
